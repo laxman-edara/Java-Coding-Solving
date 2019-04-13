@@ -49,4 +49,53 @@ public class Main {
         }
         
     }
+    
+    private static void approach2() {
+        int k = 2;
+        int a[] = { 1, 2, 3, 4, 5, 6, 7 };
+        int firstPart = a.length - k;
+        for (int i = 0; i < firstPart / 2; i++) {
+            int temp = a[i];
+            a[i] = a[firstPart - 1 - i];
+            a[firstPart - 1 - i] = temp;
+        }
+        for (int i = 0; i < k / 2; i++) {
+            int temp = a[a.length - k + i];
+            a[a.length - k + i] = a[a.length - 1 - i];
+            a[a.length - 1 - i] = temp;
+        }
+        for (int i = 0; i < a.length / 2; i++) {
+            int temp = a[i];
+            a[i] = a[a.length - 1 - i];
+            a[a.length - 1 - i] = temp;
+        }
+        for (int k1 = 0; k1 < a.length; k1++) {
+            System.out.print(a[k1] + " ");
+        }
+    }
+    
+    private static void approach3() {
+        int a[] = { 1, 2, 3, 4, 5, 6, 7 };
+        int k = 2;
+        int firstPart = a.length - k;
+        for (int i = 0; i < firstPart / 2; i++) {
+            int temp = a[i];
+            a[i] = a[firstPart - 1 - i];
+            a[firstPart - 1 - i] = temp;
+        }
+        for (int i = 0; i < k / 2; i++) {
+            int temp = a[a.length - 1 - i];
+            a[a.length - 1 - i] = a[a.length - k + i];
+            a[a.length - k + i] = temp;
+        }
+        for (int i = 0; i < a.length / 2; i++) {
+            int temp = a[i];
+            a[i] = a[a.length - 1 - i];
+            a[a.length - 1 - i] = temp;
+        }
+
+        for (int i : a) {
+            System.out.print(i + " ");
+        }
+    }
 }
