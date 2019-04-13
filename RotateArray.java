@@ -7,6 +7,18 @@ How many different ways do you know to solve this problem?
 import java.io.*;
 public class Main {
     public static void main(String[] args) throws Exception{
+          /** 
+            In the approach 1 swapping last element to last but one element and doing three(k steps) iterations.
+            for example
+                 Step 1:                 Step 2                Step 3
+(Given Number)  1 2 3 4 5 6 7          7 1 2 3 4 5 6        6 7 1 2 3 4 5 
+                1 2 3 4 5 7 6          7 1 2 3 4 6 5        6 7 1 2 3 5 4
+                1 2 3 4 7 5 6          7 1 2 3 6 4 5        6 7 1 2 5 3 4
+                1 2 3 7 4 5 6          7 1 2 6 3 4 5        6 7 1 5 2 3 4
+                1 2 7 3 4 5 6          7 1 6 2 3 4 5        6 7 5 1 2 3 4
+                1 7 2 3 4 5 6          7 6 1 2 3 4 5        6 5 7 1 2 3 4
+                7 1 2 3 4 5 6          6 7 1 2 3 4 5        5 6 7 1 2 3 4
+          **/
           approach1();
         
     }
